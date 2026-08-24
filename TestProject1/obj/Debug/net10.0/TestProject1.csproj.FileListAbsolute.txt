@@ -175,3 +175,5 @@ C:\Users\dasha\source\repos\TestProject1\TestProject1\obj\Debug\net10.0\refint\T
 C:\Users\dasha\source\repos\TestProject1\TestProject1\obj\Debug\net10.0\TestProject1.pdb
 C:\Users\dasha\source\repos\TestProject1\TestProject1\obj\Debug\net10.0\TestProject1.genruntimeconfig.cache
 C:\Users\dasha\source\repos\TestProject1\TestProject1\obj\Debug\net10.0\ref\TestProject1.dll
+C:\Users\dasha\source\repos\TestProject1\TestProject1\bin\Debug\net10.0\Resources\UsersData.json
+C:\Users\dasha\source\repos\TestProject1\TestProject1\bin\Debug\net10.0\Resources\OrderData.json

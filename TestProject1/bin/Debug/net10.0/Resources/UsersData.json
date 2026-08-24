@@ -1,0 +1,184 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "username": "user1",
+            "profile": {
+                "fullName": "Alice Johnson",
+                "age": 28,
+                "address": {
+                    "street": "Main St 12",
+                    "city": "Linköping",
+                    "geo": {
+                        "lat": 58.4100,
+                        "lng": 15.6200
+                    }
+                },
+                "tags": [ "premium", "beta", "active" ]
+            },
+            "roles": [ "admin", "editor" ]
+        },
+        {
+            "id": 2,
+            "username": "user2",
+            "profile": {
+                "fullName": "Bob Smith",
+                "age": 34,
+                "address": {
+                    "street": "Oak Road 5",
+                    "city": "Stockholm",
+                    "geo": {
+                        "lat": 59.3293,
+                        "lng": 18.0686
+                    }
+                },
+                "tags": [ "active" ]
+            },
+            "roles": [ "user" ]
+        },
+        {
+            "id": 3,
+            "username": "user3",
+            "profile": {
+                "fullName": "Carol White",
+                "age": 22,
+                "address": {
+                    "street": "River St 7",
+                    "city": "Göteborg",
+                    "geo": {
+                        "lat": 57.7089,
+                        "lng": 11.9746
+                    }
+                },
+                "tags": [ "trial", "new" ]
+            },
+            "roles": [ "user", "viewer" ]
+        },
+        {
+            "id": 4,
+            "username": "user4",
+            "profile": {
+                "fullName": "David Brown",
+                "age": 45,
+                "address": {
+                    "street": "Pine Ave 9",
+                    "city": "Malmö",
+                    "geo": {
+                        "lat": 55.6050,
+                        "lng": 13.0038
+                    }
+                },
+                "tags": [ "inactive" ]
+            },
+            "roles": [ "user" ]
+        },
+        {
+            "id": 5,
+            "username": "user5",
+            "profile": {
+                "fullName": "Eva Green",
+                "age": 31,
+                "address": {
+                    "street": "Birch St 3",
+                    "city": "Uppsala",
+                    "geo": {
+                        "lat": 59.8586,
+                        "lng": 17.6389
+                    }
+                },
+                "tags": [ "premium" ]
+            },
+            "roles": [ "editor" ]
+        },
+        {
+            "id": 6,
+            "username": "user6",
+            "profile": {
+                "fullName": "Frank Miller",
+                "age": 29,
+                "address": {
+                    "street": "Elm St 14",
+                    "city": "Västerås",
+                    "geo": {
+                        "lat": 59.6099,
+                        "lng": 16.5448
+                    }
+                },
+                "tags": [ "beta", "active" ]
+            },
+            "roles": [ "user" ]
+        },
+        {
+            "id": 7,
+            "username": "user7",
+            "profile": {
+                "fullName": "Grace Lee",
+                "age": 26,
+                "address": {
+                    "street": "Sunset Blvd 2",
+                    "city": "Örebro",
+                    "geo": {
+                        "lat": 59.2753,
+                        "lng": 15.2130
+                    }
+                },
+                "tags": [ "trial" ]
+            },
+            "roles": [ "viewer" ]
+        },
+        {
+            "id": 8,
+            "username": "user8",
+            "profile": {
+                "fullName": "Henry Ford",
+                "age": 52,
+                "address": {
+                    "street": "Hill St 8",
+                    "city": "Jönköping",
+                    "geo": {
+                        "lat": 57.7815,
+                        "lng": 14.1562
+                    }
+                },
+                "tags": [ "inactive", "legacy" ]
+            },
+            "roles": [ "admin" ]
+        },
+        {
+            "id": 9,
+            "username": "user9",
+            "profile": {
+                "fullName": "Ivy Adams",
+                "age": 19,
+                "address": {
+                    "street": "Forest Rd 11",
+                    "city": "Helsingborg",
+                    "geo": {
+                        "lat": 56.0465,
+                        "lng": 12.6945
+                    }
+                },
+                "tags": [ "new" ]
+            },
+            "roles": [ "user" ]
+        },
+        {
+            "id": 10,
+            "username": "user10",
+            "profile": {
+                "fullName": "Jack Wilson",
+                "age": 38,
+                "address": {
+                    "street": "Lakeview St 4",
+                    "city": "Karlstad",
+                    "geo": {
+                        "lat": 59.4022,
+                        "lng": 13.5115
+                    }
+                },
+                "tags": [ "premium", "active" ]
+            },
+            "roles": [ "editor", "viewer" ]
+        }
+    ]
+}
