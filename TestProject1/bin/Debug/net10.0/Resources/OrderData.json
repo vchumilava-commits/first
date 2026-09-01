@@ -1,0 +1,57 @@
+{
+    "orderId": "ORD-2026-5841",
+    "createdAt": "2026-08-19T10:15:00Z",
+    "customer": {
+        "id": 102,
+        "name": "Olga Petrova",
+        "email": "olga.petrova@example.com",
+        "phone": "+46701234567",
+        "address": {
+            "country": "Sweden",
+            "city": "Linköping",
+            "street": "Storgatan 12",
+            "zip": "58222"
+        }
+    },
+    "items": [
+        {
+            "productId": 501,
+            "name": "Wireless Headphones",
+            "category": "Electronics",
+            "quantity": 1,
+            "price": 129.99
+        },
+        {
+            "productId": 842,
+            "name": "Laptop Stand",
+            "category": "Accessories",
+            "quantity": 2,
+            "price": 39.50
+        },
+        {
+            "productId": 120,
+            "name": "USB-C Cable",
+            "category": "Electronics",
+            "quantity": 3,
+            "price": 12.00
+        }
+    ],
+    "payment": {
+        "method": "card",
+        "status": "paid",
+        "transactionId": "TXN-99887766"
+    },
+    "delivery": {
+        "type": "courier",
+        "status": "in_progress",
+        "estimatedDate": "2026-08-22",
+        "trackingNumber": "TRK-SE-554433"
+    },
+    "summary": {
+        "itemsTotal": 244.99,
+        "deliveryFee": 5.99,
+        "discount": 10.00,
+        "finalTotal": 241.98
+    }
+}
+
