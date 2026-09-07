@@ -505,3 +505,12 @@ $RECYCLE.BIN/
 /TestProject1/TestProject1.csproj
 /TestProject1/bin/Debug/net10.0/nunit_random_seed.tmp
 /TestProject1/bin/Debug/net10.0/nunit_random_seed.tmp
+/TestProject1/bin/Debug/net10.0/Microsoft.Extensions.Configuration.Abstractions.dll
+/TestProject1/bin/Debug/net10.0/Microsoft.Extensions.Configuration.Binder.dll
+/TestProject1/bin/Debug/net10.0/Microsoft.Extensions.Configuration.dll
+/TestProject1/bin/Debug/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/TestProject1/bin/Debug/net10.0/Microsoft.Extensions.DependencyInjection.dll
+/TestProject1/bin/Debug/net10.0/Microsoft.Extensions.Diagnostics.Abstractions.dll
+/TestProject1/bin/Debug/net10.0/Microsoft.Extensions.Diagnostics.dll
+/TestProject1/bin/Debug/net10.0/Microsoft.Extensions.Http.dll
+/TestProject1/bin/Debug/net10.0/Microsoft.Extensions.Logging.Abstractions.dll

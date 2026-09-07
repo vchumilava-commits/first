@@ -8,5 +8,7 @@ namespace TestProject1.Interfaces.DapperTestsInterfaces
     public interface IOrderItemsRepository
     {
         Task<IEnumerable<OrderItemsDTO>> GetOrderItemsByOrderId(int orderId);
+
+        Task<IEnumerable<OrderItemsDTO>> GetOrderItemsByProductIds(IEnumerable<long> productIds);
     }
 }

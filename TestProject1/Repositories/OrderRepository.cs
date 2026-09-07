@@ -23,5 +23,13 @@ namespace TestProject1.Repositories
                 "WHERE UserId = @userId AND Id = @id", new { userId, id });
             return order;
         }
+        public async Task<IEnumerable<OrderDTO>> GetOrdersByIds(IEnumerable<long> ids)
+        {
+            using var db = new SqliteConnection(connection);
+            var orders = await db.QueryAsync<OrderDTO>(
+                "SELECT * from Orders WHERE Id IN @ids",
+                new { ids });
+            return orders;
+        }
     }
 }
