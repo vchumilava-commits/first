@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Text.Json;
 
-namespace Tests1.Helpers
+namespace TestProject1.Helpers
 {
     public class NominatimClient
     {

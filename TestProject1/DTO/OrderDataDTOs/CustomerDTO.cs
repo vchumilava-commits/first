@@ -1,6 +1,6 @@
-﻿namespace TestProject1.DTO;
+﻿using System.Text.Json.Serialization;
 
-using System.Text.Json.Serialization;
+namespace TestProject1.DTO.OrderDataDTOs;
 
 public record CustomerDTO(
     [property: JsonPropertyName("id")]

@@ -9,7 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using FluentAssertions;
 using TestProject1.DTO.DapperTetstDTO;
 
-namespace TestProject1.Tests.Tests
+namespace TestProject1.Tests
 {
     public class DapperTests
     {
@@ -91,16 +91,16 @@ namespace TestProject1.Tests.Tests
 
 
 
-        // [Test]
-        // public async Task InitialiseTest()
-        //{
-        //      var connectionString = "Data Source=marketplace.db";
+       //  [Test]
+     //    public async Task InitialiseTest()
+     //   {
+      //        var connectionString = "Data Source=marketplace.db";
+      //
+       //      await using var connection = new SqliteConnection(connectionString);
 
-        //     await using var connection = new SqliteConnection(connectionString);
-
-        //     await connection.OpenAsync();
-
-        //      await DatabaseInitializer.InitializeAsync(connection);
+      //      await connection.OpenAsync();
+//
+       //       await DatabaseInitializer.InitializeAsync(connection);
         //  }
     }
 }

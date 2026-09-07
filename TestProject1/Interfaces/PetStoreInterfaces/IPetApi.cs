@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
 using Refit;
-using Tests1.DTO.PetStoreDTO;
-using Tests1.Interfaces.PetStoreInterfaces;
+using TestProject1.DTO.PetStoreDTO;
+using TestProject1.Interfaces.PetStoreInterfaces;
 
-namespace Tests1.Interfaces.PetStoreInterfaces
+namespace TestProject1.Interfaces.PetStoreInterfaces
 {
     public interface IPetApi
     {

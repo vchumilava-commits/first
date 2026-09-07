@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Web;
 
-namespace Tests1.DTO.BookStoreDTO
+namespace TestProject1.DTO.BookStoreDTO
 {
     public record LoginUserResponseDTO(
         string UserId,

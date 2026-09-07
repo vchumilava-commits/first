@@ -5,7 +5,7 @@ using System.IO;
 using System.Text.Json;
 using NUnit.Framework;
 
-namespace Tests1.Helpers
+namespace TestProject1.Helpers
 {
     public class FileReader
     {

@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Tests1.DTO.BookStoreDTO;
+using TestProject1.DTO.BookStoreDTO;
 using Refit;
 
-namespace Tests1.Interfaces.BookStoreInterfaces
+namespace TestProject1.Interfaces.BookStoreInterfaces
 {
     public interface IBookStoreApi
     {

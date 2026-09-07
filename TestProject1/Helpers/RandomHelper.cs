@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Tests1.Helpers
+namespace TestProject1.Helpers
 {
     public static class RandomHelper
     {

@@ -6,7 +6,7 @@ using TestProject1.DTO;
 
 namespace TestProject1.Tests;
 
-public class Tests
+public class UnitTests
 {
     private static HttpClient client;
 

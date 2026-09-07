@@ -4,7 +4,7 @@ using System.Text;
 using Microsoft.Data.Sqlite;
 using Dapper;
 
-namespace Tests1.Helpers
+namespace TestProject1.Helpers
 {
         public static class DatabaseInitializer
         {
