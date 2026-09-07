@@ -503,3 +503,5 @@ $RECYCLE.BIN/
 /TestProject1/obj/Debug/net10.0/TestProject1.csproj.FileListAbsolute.txt
 /TestProject1/obj/TestProject1.csproj.nuget.g.targets
 /TestProject1/TestProject1.csproj
+/TestProject1/bin/Debug/net10.0/nunit_random_seed.tmp
+/TestProject1/bin/Debug/net10.0/nunit_random_seed.tmp

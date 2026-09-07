@@ -2,7 +2,7 @@
 using Microsoft.Data.Sqlite;
 using Dapper;
 
-namespace TestProject1.Tests.Tests
+namespace TestProject1
 {
     public static class DatabaseInitializer
     {

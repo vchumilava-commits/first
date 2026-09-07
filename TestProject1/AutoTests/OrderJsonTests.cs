@@ -2,7 +2,7 @@
 using System.Text.Json;
 using FluentAssertions;
 using FluentAssertions.Execution;
-using TestProject1.DTO;
+using TestProject1.DTO.OrderDataDTOs;
 
 namespace TestProject1.AutoTests;
 

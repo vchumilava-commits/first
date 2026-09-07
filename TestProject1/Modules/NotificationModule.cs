@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using Tests1.DependencyInjectionTask;
+using TestProject1.DependencyInjection;
 
 namespace Tests1.Modules
 {

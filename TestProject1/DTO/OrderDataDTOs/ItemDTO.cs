@@ -1,5 +1,6 @@
 ﻿using System.Text.Json.Serialization;
-namespace TestProject1.DTO;
+
+namespace TestProject1.DTO.OrderDataDTOs;
 
 public record ItemDTO
 (
