@@ -110,7 +110,7 @@ namespace TestProject1.Tests
         }
 
         [Test]
-        public async Task Test7_SendInvalidRequestAsync()
+        public async Task Test7_SendInvalidRequest()
         {
             var listOfBooks = await api.GetBookListAsync();
             var rndIsbn = RandomHelper.GetRandomItem(listOfBooks.Books).Isbn;
@@ -128,7 +128,7 @@ namespace TestProject1.Tests
         }
 
         [Test]
-        public async Task Test8_AddBookWithInvalidIsbnAsync()
+        public async Task Test8_AddBookWithInvalidIsbn()
         {
             var token = await GetTokenAsync();
             var userId = await GetUsersIdAsync();
