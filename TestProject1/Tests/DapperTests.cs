@@ -9,7 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using FluentAssertions;
 using TestProject1.DTO.DapperTetstDTO;
 
-namespace TestProject1
+namespace TestProject1.Tests.Tests
 {
     public class DapperTests
     {

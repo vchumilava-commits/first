@@ -9,7 +9,7 @@ using TestProject1.DTO;
 using System.Net;
 
 
-namespace TestProject1;
+namespace TestProject1.Tests.Tests;
 
 public class RefitTests
 {

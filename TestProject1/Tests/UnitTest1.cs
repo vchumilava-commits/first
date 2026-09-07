@@ -4,7 +4,7 @@ using System.Net;
 
 using TestProject1.DTO;
 
-namespace TestProject1;
+namespace TestProject1.Tests;
 
 public class Tests
 {

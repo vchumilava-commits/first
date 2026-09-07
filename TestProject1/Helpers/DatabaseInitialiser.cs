@@ -1,31 +1,33 @@
-﻿using Dapper;
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
 using Microsoft.Data.Sqlite;
 using Dapper;
 
-namespace TestProject1.Helpers
+namespace Tests1.Helpers
 {
-    public static class DatabaseInitializer
-    {
-        public static async Task InitializeAsync(SqliteConnection connection)
+        public static class DatabaseInitializer
         {
-            await CreateTablesAsync(connection);
-            await SeedCategoriesAsync(connection);
-            await SeedUsersAsync(connection);
-            await SeedAddressesAsync(connection);
-            await SeedProductsAsync(connection);
-            await SeedOrdersAsync(connection);
-            await SeedOrderItemsAsync(connection);
-            await SeedReviewsAsync(connection);
-        }
+            public static async Task InitializeAsync(SqliteConnection connection)
+            {
+                await CreateTablesAsync(connection);
+                await SeedCategoriesAsync(connection);
+                await SeedUsersAsync(connection);
+                await SeedAddressesAsync(connection);
+                await SeedProductsAsync(connection);
+                await SeedOrdersAsync(connection);
+                await SeedOrderItemsAsync(connection);
+                await SeedReviewsAsync(connection);
+            }
 
-        // =========================================================
-        // TABLES
-        // =========================================================
+            // =========================================================
+            // TABLES
+            // =========================================================
 
-        private static async Task CreateTablesAsync(
-            SqliteConnection connection)
-        {
-            const string sql = """
+            private static async Task CreateTablesAsync(
+                SqliteConnection connection)
+            {
+                const string sql = """
             PRAGMA foreign_keys = ON;
 
             CREATE TABLE IF NOT EXISTS Users
@@ -122,26 +124,26 @@ namespace TestProject1.Helpers
             );
             """;
 
-            await connection.ExecuteAsync(sql);
-        }
+                await connection.ExecuteAsync(sql);
+            }
 
 
-        // =========================================================
-        // USERS
-        // =========================================================
+            // =========================================================
+            // USERS
+            // =========================================================
 
-        private static async Task SeedUsersAsync(
-            SqliteConnection connection)
-        {
-            const string sql = """
+            private static async Task SeedUsersAsync(
+                SqliteConnection connection)
+            {
+                const string sql = """
             INSERT INTO Users
                 (FirstName, LastName, Email, Phone, CreatedAt)
             VALUES
                 (@FirstName, @LastName, @Email, @Phone, @CreatedAt);
             """;
 
-            var users = new[]
-            {
+                var users = new[]
+                {
             new
             {
                 FirstName = "Иван",
@@ -278,26 +280,26 @@ namespace TestProject1.Helpers
             }
         };
 
-            await connection.ExecuteAsync(sql, users);
-        }
+                await connection.ExecuteAsync(sql, users);
+            }
 
 
-        // =========================================================
-        // ADDRESSES
-        // =========================================================
+            // =========================================================
+            // ADDRESSES
+            // =========================================================
 
-        private static async Task SeedAddressesAsync(
-            SqliteConnection connection)
-        {
-            const string sql = """
+            private static async Task SeedAddressesAsync(
+                SqliteConnection connection)
+            {
+                const string sql = """
             INSERT INTO Addresses
                 (UserId, City, Street, House, Apartment)
             VALUES
                 (@UserId, @City, @Street, @House, @Apartment);
             """;
 
-            var addresses = new[]
-            {
+                var addresses = new[]
+                {
             new { UserId = 1, City = "Москва", Street = "Ленинский проспект", House = "10", Apartment = "25" },
             new { UserId = 2, City = "Санкт-Петербург", Street = "Невский проспект", House = "15", Apartment = "41" },
             new { UserId = 3, City = "Москва", Street = "Тверская улица", House = "20", Apartment = "18" },
@@ -315,24 +317,24 @@ namespace TestProject1.Helpers
             new { UserId = 15, City = "Краснодар", Street = "Красная улица", House = "18", Apartment = "11" }
         };
 
-            await connection.ExecuteAsync(sql, addresses);
-        }
+                await connection.ExecuteAsync(sql, addresses);
+            }
 
 
-        // =========================================================
-        // CATEGORIES
-        // =========================================================
+            // =========================================================
+            // CATEGORIES
+            // =========================================================
 
-        private static async Task SeedCategoriesAsync(
-            SqliteConnection connection)
-        {
-            const string sql = """
+            private static async Task SeedCategoriesAsync(
+                SqliteConnection connection)
+            {
+                const string sql = """
             INSERT INTO Categories (Name)
             VALUES (@Name);
             """;
 
-            var categories = new[]
-            {
+                var categories = new[]
+                {
             new { Name = "Смартфоны" },
             new { Name = "Ноутбуки" },
             new { Name = "Наушники" },
@@ -341,26 +343,26 @@ namespace TestProject1.Helpers
             new { Name = "Аксессуары" }
         };
 
-            await connection.ExecuteAsync(sql, categories);
-        }
+                await connection.ExecuteAsync(sql, categories);
+            }
 
 
-        // =========================================================
-        // PRODUCTS
-        // =========================================================
+            // =========================================================
+            // PRODUCTS
+            // =========================================================
 
-        private static async Task SeedProductsAsync(
-            SqliteConnection connection)
-        {
-            const string sql = """
+            private static async Task SeedProductsAsync(
+                SqliteConnection connection)
+            {
+                const string sql = """
             INSERT INTO Products
                 (Name, Description, Price, Stock, CategoryId)
             VALUES
                 (@Name, @Description, @Price, @Stock, @CategoryId);
             """;
 
-            var products = new[]
-            {
+                var products = new[]
+                {
             new
             {
                 Name = "iPhone 15",
@@ -524,26 +526,26 @@ namespace TestProject1.Helpers
             }
         };
 
-            await connection.ExecuteAsync(sql, products);
-        }
+                await connection.ExecuteAsync(sql, products);
+            }
 
 
-        // =========================================================
-        // ORDERS
-        // =========================================================
+            // =========================================================
+            // ORDERS
+            // =========================================================
 
-        private static async Task SeedOrdersAsync(
-            SqliteConnection connection)
-        {
-            const string sql = """
+            private static async Task SeedOrdersAsync(
+                SqliteConnection connection)
+            {
+                const string sql = """
             INSERT INTO Orders
                 (UserId, OrderDate, Status, TotalPrice)
             VALUES
                 (@UserId, @OrderDate, @Status, @TotalPrice);
             """;
 
-            var orders = new[]
-            {
+                var orders = new[]
+                {
             new { UserId = 1, OrderDate = "2026-01-10", Status = "Delivered", TotalPrice = 84980 },
             new { UserId = 2, OrderDate = "2026-01-15", Status = "Delivered", TotalPrice = 24990 },
             new { UserId = 3, OrderDate = "2026-01-20", Status = "Cancelled", TotalPrice = 129990 },
@@ -563,26 +565,26 @@ namespace TestProject1.Helpers
             new { UserId = 3, OrderDate = "2026-07-01", Status = "Delivered", TotalPrice = 9990 }
         };
 
-            await connection.ExecuteAsync(sql, orders);
-        }
+                await connection.ExecuteAsync(sql, orders);
+            }
 
 
-        // =========================================================
-        // ORDER ITEMS
-        // =========================================================
+            // =========================================================
+            // ORDER ITEMS
+            // =========================================================
 
-        private static async Task SeedOrderItemsAsync(
-            SqliteConnection connection)
-        {
-            const string sql = """
+            private static async Task SeedOrderItemsAsync(
+                SqliteConnection connection)
+            {
+                const string sql = """
             INSERT INTO OrderItems
                 (OrderId, ProductId, Quantity, UnitPrice)
             VALUES
                 (@OrderId, @ProductId, @Quantity, @UnitPrice);
             """;
 
-            var items = new[]
-            {
+                var items = new[]
+                {
             // Order 1
             new { OrderId = 1, ProductId = 1, Quantity = 1, UnitPrice = 79990 },
             new { OrderId = 1, ProductId = 15, Quantity = 1, UnitPrice = 4990 },
@@ -642,26 +644,26 @@ namespace TestProject1.Helpers
             new { OrderId = 17, ProductId = 16, Quantity = 1, UnitPrice = 9990 }
         };
 
-            await connection.ExecuteAsync(sql, items);
-        }
+                await connection.ExecuteAsync(sql, items);
+            }
 
 
-        // =========================================================
-        // REVIEWS
-        // =========================================================
+            // =========================================================
+            // REVIEWS
+            // =========================================================
 
-        private static async Task SeedReviewsAsync(
-            SqliteConnection connection)
-        {
-            const string sql = """
+            private static async Task SeedReviewsAsync(
+                SqliteConnection connection)
+            {
+                const string sql = """
             INSERT INTO Reviews
                 (UserId, ProductId, Rating, Comment, CreatedAt)
             VALUES
                 (@UserId, @ProductId, @Rating, @Comment, @CreatedAt);
             """;
 
-            var reviews = new[]
-            {
+                var reviews = new[]
+                {
             new { UserId = 1, ProductId = 1, Rating = 5, Comment = "Отличный телефон", CreatedAt = "2026-01-20" },
             new { UserId = 2, ProductId = 3, Rating = 4, Comment = "За свои деньги хороший вариант", CreatedAt = "2026-01-25" },
             new { UserId = 4, ProductId = 8, Rating = 5, Comment = "Очень хорошие наушники", CreatedAt = "2026-02-10" },
@@ -679,7 +681,8 @@ namespace TestProject1.Helpers
             new { UserId = 3, ProductId = 16, Rating = 5, Comment = "Очень удобная мышь", CreatedAt = "2026-07-10" }
         };
 
-            await connection.ExecuteAsync(sql, reviews);
+                await connection.ExecuteAsync(sql, reviews);
+            }
         }
     }
-}
+
