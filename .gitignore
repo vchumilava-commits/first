@@ -480,3 +480,8 @@ $RECYCLE.BIN/
 
 # Vim temporary swap files
 *.swp
+/TestProject2/TestProject2.csproj
+/TestProject1/obj/Debug/net10.0/TestProject1.AssemblyInfo.cs
+/TestProject1/obj/Debug/net10.0/TestProject1.AssemblyInfoInputs.cache
+/TestProject1/obj/Debug/net10.0/TestProject1.assets.cache
+/TestProject1/obj/Debug/net10.0/TestProject1.GeneratedMSBuildEditorConfig.editorconfig
