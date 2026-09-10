@@ -41,7 +41,7 @@ namespace TestProject1.Tests
         //}
 
         [Test]
-        public async Task GetUserToken()
+        public async Task Test1_GetUserToken()
         {
             var credentials = new UserCreateRequestDTO("GabaGama", "StrongPass123!");
             var result = await api.GenerateTokenAsync(credentials);
@@ -49,7 +49,7 @@ namespace TestProject1.Tests
         }
 
         [Test]
-        public async Task GetUserId()
+        public async Task Test2_GetUserId()
         {
             var credentials = new UserCreateRequestDTO("GabaGama", "StrongPass123!");
             var result = await api.GetUserIdAsync(credentials);
@@ -57,7 +57,7 @@ namespace TestProject1.Tests
         }
 
         [Test]
-        public async Task GetBookListAsync()
+        public async Task Test3_GetBookListAsync()
         {
             var result = await api.GetBookListAsync();
             result.Should().NotBeNull();
@@ -66,14 +66,14 @@ namespace TestProject1.Tests
         }
 
         [Test]
-        public async Task GetBookByIsbnAsync()
+        public async Task Test4_GetBookByIsbnAsync()
         {
             var result = await api.GetBookByIsbnAsync("9781449325862");
             result.Should().NotBeNull();
         }
 
         [Test]
-        public async Task AddBookToUserAsync() // тест фейлится - ожидаемо (проблемы с апи)
+        public async Task Test5_AddBookToUserAsync() // тест фейлится - ожидаемо (проблемы с апи)
         {
             var token = await GetTokenAsync();
 
@@ -93,7 +93,7 @@ namespace TestProject1.Tests
         }
 
         [Test]
-        public async Task DeleteBookByIsbn() // работает некорректно - приходит 400-я (должна 500-я), разобраться
+        public async Task Test6_DeleteBookByIsbn() // работает некорректно - приходит 400-я (должна 500-я), разобраться
         {
             var token = await GetTokenAsync();
 
@@ -110,7 +110,7 @@ namespace TestProject1.Tests
         }
 
         [Test]
-        public async Task SendInvalidRequestAsync()
+        public async Task Test7_SendInvalidRequest()
         {
             var listOfBooks = await api.GetBookListAsync();
             var rndIsbn = RandomHelper.GetRandomItem(listOfBooks.Books).Isbn;
@@ -127,6 +127,21 @@ namespace TestProject1.Tests
             act.Should().ThrowAsync<ApiException>(); //.Where(p => p.StatusCode == System.Net.HttpStatusCode.BadRequest) - по статус кодам почему-то не отрабатывает
         }
 
+        [Test]
+        public async Task Test8_AddBookWithInvalidIsbn()
+        {
+            var token = await GetTokenAsync();
+            var userId = await GetUsersIdAsync();
+
+            var request = new AddCollectionOfBooksToUserDTO
+            (
+                userId,
+                new List<CollectionOfIsbnsDTO> { new CollectionOfIsbnsDTO("INVALID_ISBN") }
+            );
+
+            Func<Task> act = async () => await api.AddBookToUserAsync(request, token);
+            act.Should().ThrowAsync<ApiException>();
+        }
 
         //вспомогательные методы
         private async Task<string > GetTokenAsync()

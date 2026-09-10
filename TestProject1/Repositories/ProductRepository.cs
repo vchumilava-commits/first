@@ -23,5 +23,14 @@ namespace TestProject1.Repositories
                 "WHERE Id = @id", new { id });
             return productById;
         }
+
+        public async Task<IEnumerable<ProductDTO>> GetProductsByCategoryId(int categoryId)
+        {
+            using var db = new SqliteConnection(connection);
+            var products = await db.QueryAsync<ProductDTO>(
+                "SELECT * from Products WHERE CategoryId = @categoryId",
+                new { categoryId });
+            return products;
+        }
     }
 }
